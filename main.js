@@ -24,6 +24,8 @@ function init() {
         console.error(error);
     });
 
+    console.log("hello")
+
     directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
     directionalLight.position.set(10,10,0)
     directionalLight.castShadow = true
