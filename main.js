@@ -15,7 +15,7 @@ function init() {
     scene.add(camera)
 
     loader = new GLTFLoader();
-    loader.load('../assets/round-island.glb', function (glb) {
+    loader.load('round-island.glb', function (glb) {
 
         const root = glb.scene;
         root.scale.set(0.5,0.5,0.5)
