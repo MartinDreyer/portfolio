@@ -8,7 +8,7 @@ let renderer, camera, scene, transformControl, loader, controls, ambientlight, d
 
 function init() {
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xF5DEB3)
+    scene.background = new THREE.Color(0xffffff)
     
     
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -19,13 +19,12 @@ function init() {
     loader.load('round-island.glb', function (glb) {
 
         const root = glb.scene;
-        root.scale.set(0.5,0.5,0.5)
+        root.scale.set(0.2,0.2,0.2)
         scene.add(root)
     }, undefined, function (error) {
         console.error(error);
     });
 
-    console.log("hello")
 
     directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
     directionalLight.position.set(10,10,0)
@@ -55,6 +54,8 @@ function init() {
     controls.maxDistance = 35;
 
     // controls.maxPolarAngle = Math.PI / 2;
+
+
 
 
 
